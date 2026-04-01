@@ -90,11 +90,13 @@ module "sg_us" {
 
 module "ec2_mumbai" {
   source         = "aaditya-2905/ec2/aws"
+  version        = "1.2.0"
   environment    = var.environment
   ami            = var.ami_id_mumbai
   subnet_id      = module.vpc_mumbai.public_subnet_ids[0]
   sg_id          = module.sg_mumbai.sg_id
   instance_names = ["ec2-mumbai"]
+  instance_type  = "t3.micro"
   providers = {
     aws = aws.mumbai
   }
@@ -102,11 +104,13 @@ module "ec2_mumbai" {
 
 module "ec2_us" {
   source         = "aaditya-2905/ec2/aws"
+  version        = "1.2.0"
   environment    = var.environment
   ami            = var.ami_id_us
   subnet_id      = module.vpc_us.public_subnet_ids[0]
   sg_id          = module.sg_us.sg_id
   instance_names = ["ec2-us"]
+  instance_type  = "t3.micro"
   providers = {
     aws = aws.us
   }
