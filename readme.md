@@ -51,12 +51,6 @@ multi-region-infra/
 ├── providers.tf
 ├── backend.tf
 ├── .gitlab-ci.yml
-│
-└── modules (from Terraform Registry)
-    ├── vpc
-    ├── ec2
-    ├── alb
-    └── sg
 ```
 
 ---
