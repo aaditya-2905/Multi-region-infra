@@ -27,7 +27,7 @@ module "vpc_us" {
 }
 
 module "sg_mumbai" {
-  source      = "github.com/aaditya-2905/terraform-aws-sg"
+  source      = "aaditya-2905/sg/aws"
   vpc_id      = module.vpc_mumbai.vpc_id
   environment = var.environment
   ingress_rules = [
@@ -58,7 +58,7 @@ module "sg_mumbai" {
 }
 
 module "sg_us" {
-  source      = "github.com/aaditya-2905/terraform-aws-sg"
+  source      = "aaditya-2905/sg/aws"
   vpc_id      = module.vpc_us.vpc_id
   environment = var.environment
   ingress_rules = [
